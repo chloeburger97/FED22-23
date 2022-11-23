@@ -32,8 +32,3 @@ button, summary {
 
 /* jouw code */
 
-body {
-  color:var(--color-text);
-  background-color:var(--color-background);
-}
-
