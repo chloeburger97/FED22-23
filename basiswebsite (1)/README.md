@@ -161,7 +161,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
  Chloe: - Hoe kan je ervoor zorgen dat de content continu dezelfde grote blijft bij het groter en kleiner maken van de pagina?
         - Hoe kan je in de carrousel pijltjes maken waar je op kan klikken om ze te kunnen navigeren?
-
+        - HARTJE SELECTEREN RECHTSBOVEN EN HOOGTE AANPASSEN (parent oproepen lukt niet)
 
 
   ### Verslag van meeting
