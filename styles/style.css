@@ -1,29 +1,28 @@
 /**************/
 /* CSS REMEDY */
 /**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
+*,
+*::after,
+*::before {
+	margin: 0em;
+	padding: 0em;
+	box-sizing: border-box;
 }
 
-button, summary {
+button,
+summary {
 	cursor: pointer;
 }
-
-
-
-
 
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
 	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	--color-text: #111;
+	--color-background: #fafafa;
+
 }
-
-
-
 
 
 /****************/
@@ -32,3 +31,137 @@ button, summary {
 
 /* jouw code */
 
+body {
+	width: 100%;
+	position: relative;
+	font-family: 'roboto', sans-serif;
+}
+
+/* Header nav posities */
+
+header {
+	position: sticky;
+	top: 0em;
+	left: 0em;
+	width: 100%;
+	height: 1em;
+	background: white;
+	border-bottom: 0.0625em solid #dfdfdf;
+	display: flex;
+	justify-content: center;
+	padding: 0.0625em 0em;
+	list-style-type: none;
+}
+
+nav ul:nth-of-type(1) {
+	display: flex;
+	flex-direction: row;
+	max-width: 100%;
+}
+
+/* nav ul:nth-child(2) a{ HARTJE SELECTEREN RECHTSBOVEN EN HOOGTE AANPASSEN
+	height: 2em;
+} */
+
+nav:nth-of-type(1) img {
+	width: 30%;
+}
+
+ul img a:nth-of-type(1) {
+	height: 2em;
+}
+
+header nav:nth-of-type(2) {
+	position: fixed;
+	display: sticky;
+	bottom: 0;
+	justify-content: center;
+}
+
+
+header nav:nth-of-type(3) {
+	display: sticky;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+nav:nth-of-type(3) ul {
+	display: flex;
+	flex-direction: column;
+}
+
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* Instagram feed sections */
+
+section {
+	display: flex;
+	flex-direction: column;
+	max-width: 50%;
+	background: #fff;
+	border: 0.0625em solid #dfdfdf;
+	border-radius: 0.125em;
+}
+
+/* stories section */
+
+section:nth-of-type(1) {
+	/* padding: 1em; */
+	width: 100%;
+	margin-top: 1em;
+}
+
+section:nth-of-type(1) ul {
+	display: flex;
+	gap: 3.5em;
+	overflow: auto;
+	margin: 1em;
+	list-style-type: none;
+}
+
+section:nth-of-type(1) li {
+	width: 2em;
+	flex-shrink: 0;
+}
+
+section:nth-of-type(1) li img {
+	width: 4.12em;
+	height: 4.12em;
+	border-radius: 50%;
+	text-align: center;
+}
+
+
+/* navbar verschuift van plek */
+
+@media (min-width: 47.9em) {
+	header nav:nth-of-type(2) {
+		display: none;
+	}
+}
+
+header nav:nth-of-type(3) {
+	display: none;
+}
+
+@media (min-width: 47.9em) {
+	header nav:nth-of-type(3) {
+		display: block;
+	}
+}
