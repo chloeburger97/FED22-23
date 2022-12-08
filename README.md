@@ -221,18 +221,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 3e voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+ De css ging deze week stukken beter, ik heb eindelijk het witte licht gezien en snap de selectoren veel beter dan eerst. Ik heb een hele grote stap kunnen maken met de lay-out en content van de pagina. 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  Lynn: - Hoe maak ik de side navigatie op de product pagina?
+        - Hoe navigeer ik door een slider met buttons?
 
+  Guido: - Hoe kan ik ervoor zorgen dat de tekst en afbeeldingen in een grid column komen?
+
+  Chloé: - Hoe kan ik zonder javascript pijltjes maken in de slider?
+          - Hoe kan je de tekst wanneer de pagina groter wordt tevoorschijn laten komen naast een img icon?
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen

@@ -5,6 +5,7 @@
 *::after,
 *::before {
 	margin: 0em;
+	/* fons bah */
 	padding: 0em;
 	box-sizing: border-box;
 }
@@ -21,6 +22,17 @@ summary {
 	/* startje */
 	--color-text: #111;
 	--color-background: #fafafa;
+
+}
+
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
 
 }
 
@@ -42,92 +54,128 @@ body {
 header {
 	position: sticky;
 	top: 0em;
-	left: 0em;
-	width: 100%;
-	height: 1em;
+
+
 	background: white;
 	border-bottom: 0.0625em solid #dfdfdf;
-	display: flex;
-	justify-content: center;
+
 	padding: 0.0625em 0em;
+}
+
+/* klein nav boven */
+header nav:first-of-type ul {
+	list-style: none;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 0 1em;
+
+}
+
+header nav:first-of-type li:first-of-type a img {
+	width: 7em;
+}
+
+header nav:first-of-type li:last-of-type a img {
+	width: 2em;
+}
+
+
+/* klein nav beneden */
+header nav:nth-of-type(2) {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	background-color: white;
+}
+
+header nav:nth-of-type(2) ul {
+	display: flex;
+	list-style: none;
+	justify-content: space-around;
+}
+
+header nav:nth-of-type(2) ul img {
+	width: 3em;
+}
+
+
+/* nav groot */
+header nav:nth-of-type(3) {
+	display: none;
+}
+
+header nav:nth-of-type(3) ul {
 	list-style-type: none;
 }
 
-nav ul:nth-of-type(1) {
-	display: flex;
-	flex-direction: row;
-	max-width: 100%;
-}
-
-/* nav ul:nth-child(2) a{ HARTJE SELECTEREN RECHTSBOVEN EN HOOGTE AANPASSEN
-	height: 2em;
-} */
-
-nav:nth-of-type(1) img {
-	width: 30%;
-}
-
-ul img a:nth-of-type(1) {
-	height: 2em;
-}
-
-header nav:nth-of-type(2) {
-	position: fixed;
-	display: sticky;
-	bottom: 0;
-	justify-content: center;
+header nav a:nth-of-type(2) img {
+	width: 8em;
+	padding: 2em 0em 0em 0em;
 }
 
 
-header nav:nth-of-type(3) {
-	display: sticky;
-	position: fixed;
-	top: 0;
-	left: 0;
-}
-
-nav:nth-of-type(3) ul {
-	display: flex;
-	flex-direction: column;
-}
-
-.visually-hidden {
-	clip: rect(0 0 0 0);
-	clip-path: inset(50%);
-	height: 1px;
-	overflow: hidden;
-	position: absolute;
-	white-space: nowrap;
-	width: 1px;
-
-}
-
+/* MAIN  */
 main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
+
+
 /* Instagram feed sections */
 
-section {
+main section{
 	display: flex;
 	flex-direction: column;
-	max-width: 50%;
+	width: 30em;
 	background: #fff;
-	border: 0.0625em solid #dfdfdf;
+	border-bottom: 0.0625em solid #dfdfdf;
 	border-radius: 0.125em;
 }
 
+section section {
+	flex-direction: row;
+}
+
+section section img {
+	width:3em;
+}
+
+section section h1{
+	padding-top:0.8em;
+}
+
+main section:first-of-type{
+	border-bottom: none;
+}
+
+main section img {
+border-radius: 0.2em;
+}
+
+section ul li{
+	padding:0.2em;
+}
+
+section ul li:nth-of-type(4) {
+	padding-left: 20.5em;
+}
+
+
 /* stories section */
 
-section:nth-of-type(1) {
+main section:nth-of-type(1) {
 	/* padding: 1em; */
-	width: 100%;
 	margin-top: 1em;
 }
 
-section:nth-of-type(1) ul {
+main section:nth-of-type(1) ul {
 	display: flex;
 	gap: 3.5em;
 	overflow: auto;
@@ -135,33 +183,77 @@ section:nth-of-type(1) ul {
 	list-style-type: none;
 }
 
-section:nth-of-type(1) li {
+main section:nth-of-type(1) li {
 	width: 2em;
 	flex-shrink: 0;
 }
 
-section:nth-of-type(1) li img {
+main section:nth-of-type(1) li img {
 	width: 4.12em;
 	height: 4.12em;
 	border-radius: 50%;
 	text-align: center;
 }
 
+main section ul {
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+}
+
+main section li img {
+	width: 2em;
+}
+
+
+
 
 /* navbar verschuift van plek */
 
 @media (min-width: 47.9em) {
+
+	header nav:nth-of-type(1),
 	header nav:nth-of-type(2) {
+		display: none;
+
+	}
+
+	header nav:nth-of-type(3) {
+		display: block;
+
+		display: sticky;
+		position: fixed;
+		top: 0;
+		left: 0;
+		padding: 0em 8em 14em 1em;
+		justify-content: space-between;
+		border-right: 0.0625em solid #dfdfdf;
+		border-radius: 0.125em;
+	}
+
+	nav:nth-of-type(3) ul {
+		display: flex;
+		flex-direction: column;
+
+	}
+
+	nav:nth-of-type(3)>a img,
+	nav:nth-of-type(3) ul img {
+		width: 2.5em;
+		padding-top: 1.5em;
+	}
+
+	nav:nth-of-type(3)>a:nth-of-type(2) {
 		display: none;
 	}
 }
 
-header nav:nth-of-type(3) {
-	display: none;
-}
+@media (min-width: 78.43em) {
+	nav:nth-of-type(3)>a:nth-of-type(1) {
+		display: none;
+	}
 
-@media (min-width: 47.9em) {
-	header nav:nth-of-type(3) {
+	nav:nth-of-type(3)>a:nth-of-type(2) {
 		display: block;
 	}
 }
